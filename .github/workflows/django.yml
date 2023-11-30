@@ -15,4 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}.
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: "Say Hello Mona it's Monday"
+        if: ${{ env.USERNAME == 'sunck' }}
+        run: echo "good man"
