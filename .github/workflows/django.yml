@@ -17,5 +17,5 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: "Say Hello Mona it's Monday"
-        if: ${{ vars.USERNAME == 'sunck' }}
+        if: ${{ secrets.NICKNAME == 'kaige' }}
         run: echo "nicekname = ${{ secrets.NICKNAME}}"
