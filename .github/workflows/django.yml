@@ -16,7 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
 
-      - name: "pull docker image"
+      - name: "deploy"
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
