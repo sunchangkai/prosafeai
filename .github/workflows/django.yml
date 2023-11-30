@@ -25,3 +25,4 @@ jobs:
           port: ${{ secrets.PORT }}
           run: |
             ifconfig
+            whoami
