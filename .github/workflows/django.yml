@@ -16,7 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: "Say Hello Mona it's Monday"
+      - name: "pull docker image"
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
