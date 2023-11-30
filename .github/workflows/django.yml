@@ -17,5 +17,11 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: "Say Hello Mona it's Monday"
-        if: ${{ secrets.NICKNAME == 'kaige' }}
-        run: echo "nicekname = ${{ secrets.NICKNAME}}"
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            ifconfig
