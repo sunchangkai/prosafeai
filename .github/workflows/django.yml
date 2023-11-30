@@ -18,4 +18,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: "Say Hello Mona it's Monday"
         if: ${{ vars.USERNAME == 'sunck' }}
-        run: echo "good man"
+        run: echo "nicekname = ${{ secrets.NICKNAME}}"
