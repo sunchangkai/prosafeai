@@ -20,8 +20,7 @@ jobs:
         run: |
           docker info
           docker images
-          docker login --username=a18604558122 registry.cn-hangzhou.aliyuncs.com
-          13763405168YUmiao
+          docker login --username=a18604558122 -p=13763405168YUmiao registry.cn-hangzhou.aliyuncs.com
           docker pull registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v3.0
           docker images
 
