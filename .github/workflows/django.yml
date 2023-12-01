@@ -47,7 +47,8 @@ jobs:
           script: |
             pwd
             docker login --username=a18604558122 -p=13763405168YUmiao registry.cn-hangzhou.aliyuncs.com
-            docker images
-            docker pull registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0
-            docker images
-            docker run -d -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0 /root/code/manage.py 0.0.0.0:8000
+            ifconfig
+            # docker images
+            # docker pull registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0
+            # docker images
+            # docker run -d -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0 /root/code/manage.py 0.0.0.0:8000
