@@ -16,19 +16,16 @@ jobs:
         run: |
           ls ${{ github.workspace }}
 
-      - name: "build"
-        run: |
-          # docker info
-          # docker images
-          pwd
-          # docker login --username=a18604558122 -p=13763405168YUmiao registry.cn-hangzhou.aliyuncs.com
-          # docker pull registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v3.0
-          # docker images
-          # docker build -t registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0 .
-          docker images
-          # docker push registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0
-          
-
+      - name: Copy files to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: './'
+          target: /home/sunck/prosafeai/
+        
   deploy-prosafeAI:
     needs: build-prosafeAI
     runs-on: ubuntu-latest
@@ -46,12 +43,12 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             pwd
-            /tt.sh
+            # /tt.sh
             # docker images
             # docker ps -a
             # docker login --username=a18604558122 -p=13763405168YUmiao registry.cn-hangzhou.aliyuncs.com
             # echo "$PASSWORD" | docker login --username a18604558122 --password-stdin registry.cn-hangzhou.aliyuncs.com
-            ifconfig
+            # ifconfig
             # docker images
             # docker pull registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0
             # docker images
