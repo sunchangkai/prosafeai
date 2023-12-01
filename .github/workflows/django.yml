@@ -21,11 +21,12 @@ jobs:
           # docker info
           # docker images
           pwd
-          # docker login --username=a18604558122 -p=13763405168YUmiao registry.cn-hangzhou.aliyuncs.com
-          # docker pull registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v3.0
+          docker login --username=a18604558122 -p=13763405168YUmiao registry.cn-hangzhou.aliyuncs.com
+          docker pull registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v3.0
           # docker images
-          # docker build -t registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0 .
-          # docker push registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0
+          docker build -t registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0 .
+          docker images
+          docker push registry.cn-hangzhou.aliyuncs.com/sunck_images_01/ubuntu:v4.0
           
 
   deploy-prosafeAI:
